@@ -11,6 +11,15 @@
     </div>
     <div class="grid_5" >
         <div class="box">
+            <h2>{% trans "Votes" %}</h2>
+            <div class='utils'>
+                <a href='vote' style='font-size:14px; font-weight: bold;'>+1</a>
+            </div>
+            <div style='font-size: 48px; text-align: center;'>
+                {{object.votes}}
+            </div>
+        </div>
+        <div class="box">
             <h2>{% trans "Attachments" %}</h2>
             <ul>
             {% for attachment in object.attachments.all %}

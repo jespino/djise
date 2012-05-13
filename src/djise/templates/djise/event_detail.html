@@ -8,20 +8,6 @@
             <h2>{{object.name}}</h2>
             <p>{{object.description}}</p>
         </div>
-    </div>
-
-    <div class="grid_5" >
-        <div class="box">
-            <h2>{% trans "Attachments" %}</h2>
-            <ul>
-            {% for attachment in object.attachments.all %}
-                <li><a href="{{ attachment.attachment.url }}">{{attachment.name}}: {{ attachment.description }}</a></li>
-            {% endfor %}
-            </ul>
-        </div>
-    </div>
-
-    <div class="grid_11" >
         <div class="box">
             <h2>{% trans "Activities" %}</h2>
             <table>
@@ -42,6 +28,25 @@
                 {% endfor %}
                 </tbody>
             </table>
+        </div>
+    </div>
+
+    <div class="grid_5" >
+        <div class="box">
+            <h2>{% trans "Proposal" %}</h2>
+            <form method="post" action="">
+                {% csrf_token %}
+                {{ proposal_form.as_p }}
+                <input type='submit' value='send'>
+            </form>
+        </div>
+        <div class="box">
+            <h2>{% trans "Attachments" %}</h2>
+            <ul>
+            {% for attachment in object.attachments.all %}
+                <li><a href="{{ attachment.attachment.url }}">{{attachment.name}}: {{ attachment.description }}</a></li>
+            {% endfor %}
+            </ul>
         </div>
     </div>
 
