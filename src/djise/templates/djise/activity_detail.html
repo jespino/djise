@@ -1,0 +1,30 @@
+{% extends "djise/base.html" %}
+
+{% load i18n %}
+
+{% block content %}
+    <div class="grid_11" >
+        <div class="box">
+            <h2>{{object.name}}</h2>
+            <p>{{object.description}}</p>
+        </div>
+    </div>
+    <div class="grid_5" >
+        <div class="box">
+            <h2>{% trans "Attachments" %}</h2>
+            <ul>
+            {% for attachment in object.attachments.all %}
+                <li><a href="{{ attachment.attachment.url }}">{{attachment.name}}: {{ attachment.description }}</a></li>
+            {% endfor %}
+            </ul>
+        </div>
+    </div>
+
+    <div class="grid_16" >
+        <div class="box">
+            <h2>{% trans "Comments" %}</h2>
+            {% load disqus_tags %}
+            {% disqus_show_comments %}
+        </div>
+    </div>
+{% endblock %}

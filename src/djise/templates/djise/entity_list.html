@@ -1,0 +1,26 @@
+{% extends "djise/base.html" %}
+
+{% load i18n %}
+
+{% block content %}
+    <div class="grid_16" >
+        <div class="box">
+            <table>
+                <thead>
+                    <tr>
+                        <th>{% trans "Name" %}</th>
+                        <th>{% trans "Description" %}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for entity in object_list %}
+                    <tr>
+                        <td><a href="{% url entity entity.slug %}">{{entity.name}}</a></td>
+                        <td>{{entity.description}}</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}

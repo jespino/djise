@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+		<title>Djise</title>
+        <link rel="stylesheet" href="{{STATIC_URL}}css/960.css" type="text/css" media="screen" charset="utf-8" />
+        <!--<link rel="stylesheet" href="{{STATIC}}css/fluid.css" type="text/css" media="screen" charset="utf-8" />-->
+        <link rel="stylesheet" href="{{STATIC_URL}}css/template.css" type="text/css" media="screen" charset="utf-8" />
+        <link rel="stylesheet" href="{{STATIC_URL}}css/colour.css" type="text/css" media="screen" charset="utf-8" />
+	</head>
+	<body>
+        <h1 id="head"><a href='{% url entities %}'>Djise</a></h1>
+		
+		<ul id="navigation">
+			<li><span class="active">Overview</span></li>
+			<li><a href="#">News</a></li>
+			<li><a href="#">Users</a></li>
+		</ul>
+		
+			<div id="content" class="container_16 clearfix">
+                {% block content %}
+                {% endblock %}
+			</div>
+		
+		<div id="foot">
+		    <a href="#">Contact Me</a>
+		</div>
+	</body>
+</html>
