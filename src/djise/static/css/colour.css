@@ -6,7 +6,7 @@ small {
 }
 
 th,#navigation,.active,input[type=submit],.pagination a:hover,.date td a:hover {
-	background:#434A48;
+	background:#444499;
 	color:#fff
 }
 
@@ -24,6 +24,11 @@ tr {
 	color:#fff;
 }
 
+th a {
+    color:#fff;
+    text-decoration: none;
+}
+
 input, select, textarea {
 	border-color:#ddd
 }
@@ -33,7 +38,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 a {
-	color:#888
+	color:#558
 }
 a.edit {
 	background-image:url(edit.png)
@@ -43,14 +48,19 @@ a.delete {
 }
 
 #head {
-	background:#313230
+	background:#111155
+}
+
+#head a {
+    color: white;
+    text-decoration: none;
 }
 
 #navigation a:hover {
-	background:#383E3C
+	background:#333377
 }
 #navigation .active {
-	background:#687370
+	background:#333388
 }
 
 .box,.box > .utils a {

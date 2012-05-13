@@ -6,7 +6,16 @@
     <div class="grid_11" >
         <div class="box">
             <h2>{{object.name}}</h2>
-            <p>{{object.description}}</p>
+            <ul class="box" style="margin:5px; width: 628px !important;">
+                <li><strong>{% trans "Speaker:" %}</strong> {{object.speaker}}</li>
+                <li><strong>{% trans "Date/Time:" %}</strong> {{object.datetime}}</li>
+                <li><strong>{% trans "Duration:" %}</strong> {{object.duration}}</li>
+                <li><strong>{% trans "Level:" %}</strong> {{object.level}}</li>
+            </ul>
+            <div class="box" style="margin:5px; width: 628px !important;">
+                <p><strong>{% trans "Description:" %}</strong></p>
+                {{object.description|linebreaks}}
+            </div>
         </div>
     </div>
     <div class="grid_5" >

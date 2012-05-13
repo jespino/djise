@@ -1,0 +1,33 @@
+{% extends "djise/base.html" %}
+
+{% load i18n %}
+
+{% block content %}
+    <div class="grid_16" >
+        <div class="box">
+            <h2>{% trans "Events" %}</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th><a href='?order=name'>{% trans "Name" %}</a></th>
+                        <th><a href='?order=entity'>{% trans "Entity" %}</a></th>
+                        <th><a href='?order=description'>{% trans "Description" %}</a></th>
+                        <th><a href='?order=activities'>{% trans "Activities" %}</a></th>
+                        <th><a href='?order=status'>{% trans "Status" %}</a></th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for event in object_list %}
+                  <tr>
+                    <td><a href="{% url event event.slug %}">{{event.name}}</a></td>
+                    <td><a href="{% url entity event.entity.slug %}">{{event.entity}}</a></td>
+                    <td>{{event.description}}</td>
+                    <td>{{event.activities.count}}</td>
+                    <td>{{event.status}}</td>
+                  </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}

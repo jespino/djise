@@ -28,11 +28,22 @@ STATUS_CHOICES = (
         ('call-for-papers', _('In Call 4 Papers')),
 )
 
+LEVEL_CHOICES = (
+        ('very-easy', _('Very easy')),
+        ('easy', _('Easy')),
+        ('normal', _('Normal')),
+        ('hard', _('Hard')),
+        ('very-hard', _('Very hard')),
+)
+
 class Entity(models.Model):
     slug = models.SlugField(max_length=50)
     name = models.CharField(max_length=50)
     created = models.DateTimeField(auto_now_add=True)
     modified = models.DateTimeField(auto_now=True)
+
+    def __unicode__(self):
+        return self.name
 
 class Event(models.Model):
     slug = models.SlugField(max_length=50)
@@ -46,9 +57,13 @@ class Activity(models.Model):
     slug = models.SlugField(max_length=50, unique=True)
     name = models.CharField(max_length=50)
     description = models.TextField()
-    event = models.ForeignKey('Event', verbose_name='Event', related_name='activities')
+    event = models.ForeignKey('Event', verbose_name=_('Event'), related_name='activities')
     votes = models.IntegerField(default=0)
     datetime = models.DateTimeField(null=True, blank=True)
+    speaker = models.CharField(max_length=255)
+    duration = models.IntegerField(null=True, blank=True)
+    knowledges_needed = models.TextField(null=True, blank=True)
+    level = models.SlugField(choices=LEVEL_CHOICES)
     created = models.DateTimeField(auto_now_add=True)
     modified = models.DateTimeField(auto_now=True)
 

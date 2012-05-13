@@ -1,3 +1,4 @@
+{% load i18n %}
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
 	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
@@ -13,9 +14,9 @@
         <h1 id="head"><a href='{% url entities %}'>Djise</a></h1>
 		
 		<ul id="navigation">
-			<li><span class="active">Overview</span></li>
-			<li><a href="#">News</a></li>
-			<li><a href="#">Users</a></li>
+            <li><span class="active"><a href="{% url entities %}">{% trans "Entities" %}</a></span></li>
+            <li><a href="{% url events %}">{% trans "Events" %}</a></li>
+            <li style="float:right;"><a href="/admin/">{% trans "Admin" %}</a></li>
 		</ul>
 		
 			<div id="content" class="container_16 clearfix">

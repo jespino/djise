@@ -37,7 +37,11 @@ class Command(BaseCommand):
                             name="%s %s %s" % (self.random_word(), self.random_word(), self.random_word()),
                             description=self.random_paragraph(),
                             votes=self.random_value(10),
-                            event=event
+                            event=event,
+                            speaker="%s %s" % (self.random_word(), self.random_word()),
+                            duration=random.choice(range(15,120)),
+                            knowledges_needed=self.random_paragraph(),
+                            level=random.choice([ level[0] for level in LEVEL_CHOICES ])
                     )
     
     # Random functions:
