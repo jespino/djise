@@ -21,9 +21,15 @@
     <div class="grid_5" >
         <div class="box">
             <h2>{% trans "Votes" %}</h2>
+            {% if not object.slug in request.session %}
             <div class='utils'>
-                <a href='vote' style='font-size:14px; font-weight: bold;'>+1</a>
+                <a href='{% url activity-vote object.slug %}' style='font-size:14px; font-weight: bold;'>+1</a>
             </div>
+            {% else %}
+            <div class='utils'>
+                <span style='font-size:14px; font-weight: bold;'>{% trans "Already voted" %}</span>
+            </div>
+            {% endif %}
             <div style='font-size: 48px; text-align: center;'>
                 {{object.votes}}
             </div>

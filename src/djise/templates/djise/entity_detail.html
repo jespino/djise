@@ -25,7 +25,7 @@
                 {% for event in object.events.all %}
                   <tr>
                     <td><a href="{% url event event.slug %}">{{event.name}}</a></td>
-                    <td>{{event.description}}</td>
+                    <td>{{event.description|truncatewords:25}}</td>
                     <td>{{event.activities.count}}</td>
                     <td>{{event.status}}</td>
                   </tr>

@@ -17,7 +17,7 @@
                 {% for entity in object_list %}
                     <tr>
                         <td><a href="{% url entity entity.slug %}">{{entity.name}}</a></td>
-                        <td>{{entity.description}}</td>
+                        <td>{{entity.description|truncatewords:25}}</td>
                     </tr>
                 {% endfor %}
                 </tbody>

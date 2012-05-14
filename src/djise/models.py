@@ -39,6 +39,7 @@ LEVEL_CHOICES = (
 class Entity(models.Model):
     slug = models.SlugField(max_length=50)
     name = models.CharField(max_length=50)
+    description = models.TextField()
     created = models.DateTimeField(auto_now_add=True)
     modified = models.DateTimeField(auto_now=True)
 
@@ -48,6 +49,7 @@ class Entity(models.Model):
 class Event(models.Model):
     slug = models.SlugField(max_length=50)
     name = models.CharField(max_length=50)
+    description = models.TextField()
     status = models.SlugField(max_length=25, choices=STATUS_CHOICES)
     entity = models.ForeignKey('Entity', related_name='events')
     created = models.DateTimeField(auto_now_add=True)

@@ -22,12 +22,14 @@ class Command(BaseCommand):
         for x in range(ENTITIES):
             entity = Entity.objects.create(
                     slug=self.random_slug(),
+                    description=self.random_paragraph(),
                     name="%s %s" % (self.random_word(), self.random_word())
             )
             for y in range(EVENTS_PER_ENTITY):
                 event = Event.objects.create(
                         slug=self.random_slug(),
                         name="%s %s %s" % (self.random_word(), self.random_word(), self.random_word()),
+                        description=self.random_paragraph(),
                         status=random.choice([ status[0] for status in STATUS_CHOICES ]),
                         entity=entity
                 )
