@@ -55,6 +55,9 @@ class Event(models.Model):
     created = models.DateTimeField(auto_now_add=True)
     modified = models.DateTimeField(auto_now=True)
 
+    def __unicode__(self):
+        return self.name
+
 class Activity(models.Model):
     slug = models.SlugField(max_length=50, unique=True)
     name = models.CharField(max_length=50)
@@ -69,6 +72,9 @@ class Activity(models.Model):
     created = models.DateTimeField(auto_now_add=True)
     modified = models.DateTimeField(auto_now=True)
 
+    def __unicode__(self):
+        return self.name
+
     def save(self, *args, **kwargs):
         if not self.slug:
             self.slug = slugify_uniquely(self.name, self.__class__)
@@ -82,6 +88,9 @@ class ActivityAttachment(models.Model):
     created = models.DateTimeField(auto_now_add=True)
     modified = models.DateTimeField(auto_now=True)
 
+    def __unicode__(self):
+        return self.name
+
 class EventAttachment(models.Model):
     name = models.CharField(max_length=50)
     description = models.TextField()
@@ -89,3 +98,6 @@ class EventAttachment(models.Model):
     attachment = models.FileField(upload_to='activity_attachments')
     created = models.DateTimeField(auto_now_add=True)
     modified = models.DateTimeField(auto_now=True)
+
+    def __unicode__(self):
+        return self.name
