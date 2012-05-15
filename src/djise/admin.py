@@ -5,18 +5,16 @@ class EntityAdmin(admin.ModelAdmin):
     pass
 admin.site.register(Entity, EntityAdmin)
 
-class EventAdmin(admin.ModelAdmin):
+class EventAttachmentInline(admin.StackedInline):
     pass
+
+class EventAdmin(admin.ModelAdmin):
+    inlines = [ EventAttachmentInline ]
 admin.site.register(Event, EventAdmin)
 
+class ActivityAttachmentInline(admin.StackedInline):
+    pass
+
 class ActivityAdmin(admin.ModelAdmin):
-    pass
+    inlines = [ ActivityAttachmentInline ]
 admin.site.register(Activity, ActivityAdmin)
-
-class EventAttachmentAdmin(admin.ModelAdmin):
-    pass
-admin.site.register(EventAttachment, EventAttachmentAdmin)
-
-class ActivityAttachmentAdmin(admin.ModelAdmin):
-    pass
-admin.site.register(ActivityAttachment, ActivityAttachmentAdmin)
