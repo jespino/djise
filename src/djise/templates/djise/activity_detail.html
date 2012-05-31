@@ -38,7 +38,7 @@
             <h2>{% trans "Attachments" %}</h2>
             <ul>
             {% for attachment in object.attachments.all %}
-                <li><a href="{{ attachment.attachment.url }}">{{attachment.name}}: {{ attachment.description }}</a></li>
+                <li><a href="{{ attachment.attachment.url }}">{{attachment.name}}</a></li>
             {% endfor %}
             </ul>
         </div>

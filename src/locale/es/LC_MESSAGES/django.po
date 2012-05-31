@@ -1,0 +1,163 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-05-31 12:04-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+
+#: djise/models.py:25
+msgid "In progress"
+msgstr "En progreso"
+
+#: djise/models.py:26
+msgid "Closed"
+msgstr "Cerrado"
+
+#: djise/models.py:27
+msgid "Voting"
+msgstr "Votando"
+
+#: djise/models.py:28
+msgid "In Call 4 Papers"
+msgstr "En Call 4 Papers"
+
+#: djise/models.py:32
+msgid "Very easy"
+msgstr "Muy fácil"
+
+#: djise/models.py:33
+msgid "Easy"
+msgstr "Fácil"
+
+#: djise/models.py:34
+msgid "Normal"
+msgstr "Normal"
+
+#: djise/models.py:35
+msgid "Hard"
+msgstr "Duro"
+
+#: djise/models.py:36
+msgid "Very hard"
+msgstr "Muy duro"
+
+#: djise/models.py:65
+msgid "Event"
+msgstr "Evento"
+
+#: djise/views.py:39
+msgid "Proposal sended."
+msgstr "Propuesta enviada."
+
+#: djise/views.py:54
+msgid "Activity voted."
+msgstr "Actividad votada."
+
+#: djise/views.py:57
+msgid "You have already voted this activity."
+msgstr "Ya has votado esta actividad."
+
+#: djise/templates/djise/activity_detail.html:10
+msgid "Speaker:"
+msgstr "Ponente:"
+
+#: djise/templates/djise/activity_detail.html:11
+msgid "Date/Time:"
+msgstr "Fecha/Hora:"
+
+#: djise/templates/djise/activity_detail.html:12
+msgid "Duration:"
+msgstr "Duración:"
+
+#: djise/templates/djise/activity_detail.html:13
+msgid "Level:"
+msgstr "Nivel:"
+
+#: djise/templates/djise/activity_detail.html:16
+msgid "Description:"
+msgstr "Descripción:"
+
+#: djise/templates/djise/activity_detail.html:23
+#: djise/templates/djise/event_detail.html:18
+msgid "Votes"
+msgstr "Votos"
+
+#: djise/templates/djise/activity_detail.html:30
+msgid "Already voted"
+msgstr "Ya votada"
+
+#: djise/templates/djise/activity_detail.html:38
+#: djise/templates/djise/event_detail.html:44
+msgid "Attachments"
+msgstr "Adjuntos"
+
+#: djise/templates/djise/activity_detail.html:49
+#: djise/templates/djise/event_detail.html:55
+msgid "Comments"
+msgstr "Comentarios"
+
+#: djise/templates/djise/base.html:18 djise/templates/djise/entity_list.html:8
+msgid "Entities"
+msgstr "Entidades"
+
+#: djise/templates/djise/base.html:19
+#: djise/templates/djise/entity_detail.html:14
+#: djise/templates/djise/event_list.html:8
+msgid "Events"
+msgstr "Eventos"
+
+#: djise/templates/djise/base.html:20
+msgid "Admin"
+msgstr "Administrar"
+
+#: djise/templates/djise/entity_detail.html:18
+#: djise/templates/djise/entity_list.html:12
+#: djise/templates/djise/event_list.html:12
+msgid "Name"
+msgstr "Nombre"
+
+#: djise/templates/djise/entity_detail.html:19
+#: djise/templates/djise/entity_list.html:13
+#: djise/templates/djise/event_list.html:14
+msgid "Description"
+msgstr "Descripción"
+
+#: djise/templates/djise/entity_detail.html:20
+#: djise/templates/djise/event_detail.html:12
+#: djise/templates/djise/event_list.html:15
+msgid "Activities"
+msgstr "Actividades"
+
+#: djise/templates/djise/entity_detail.html:21
+#: djise/templates/djise/event_list.html:16
+msgid "Status"
+msgstr "Estado"
+
+#: djise/templates/djise/event_detail.html:16
+msgid "Title"
+msgstr "Título"
+
+#: djise/templates/djise/event_detail.html:17
+msgid "Date/Time"
+msgstr "Fecha/Hora"
+
+#: djise/templates/djise/event_detail.html:36
+msgid "Proposal"
+msgstr "Propuesta"
+
+#: djise/templates/djise/event_list.html:13
+msgid "Entity"
+msgstr "Entidad"

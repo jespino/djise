@@ -83,7 +83,7 @@ class Activity(models.Model):
 class ActivityAttachment(models.Model):
     name = models.CharField(max_length=50)
     activity = models.ForeignKey('Activity', related_name='attachments')
-    attachment = models.FileField(upload_to='activity_attachments')
+    attachment = models.FileField(upload_to='media/activity_attachments')
     created = models.DateTimeField(auto_now_add=True)
     modified = models.DateTimeField(auto_now=True)
 
@@ -93,7 +93,7 @@ class ActivityAttachment(models.Model):
 class EventAttachment(models.Model):
     name = models.CharField(max_length=50)
     event = models.ForeignKey('Event', related_name='attachments')
-    attachment = models.FileField(upload_to='activity_attachments')
+    attachment = models.FileField(upload_to='media/activity_attachments')
     created = models.DateTimeField(auto_now_add=True)
     modified = models.DateTimeField(auto_now=True)
 
