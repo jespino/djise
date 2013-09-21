@@ -127,6 +127,7 @@ INSTALLED_APPS = (
     # 'django.contrib.admindocs',
     'disqus',
     'rest_framework',
+    'sampledatahelper',
     'djise',
 )
 
@@ -166,3 +167,13 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     "django.contrib.messages.context_processors.messages",
     "django.core.context_processors.request"
 )
+
+SAMPLEDATAHELPER_MODELS = [
+    { 'model': 'djise.Entity', 'number': 2, },
+    { 'model': 'djise.Event', 'number': 6, },
+    { 'model': 'djise.EventAttachment', 'number': 12, },
+    { 'model': 'djise.Activity', 'number': 30, },
+    { 'model': 'djise.ActivityAttachment', 'number': 60, },
+]
+
+USE_TZ = True
