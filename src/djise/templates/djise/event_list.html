@@ -19,8 +19,8 @@
                 <tbody>
                 {% for event in object_list %}
                   <tr>
-                    <td><a href="{% url event event.slug %}">{{event.name}}</a></td>
-                    <td><a href="{% url entity event.entity.slug %}">{{event.entity}}</a></td>
+                    <td><a href="{% url "event" event.slug %}">{{event.name}}</a></td>
+                    <td><a href="{% url "entity" event.entity.slug %}">{{event.entity}}</a></td>
                     <td>{{event.description|truncatewords:25}}</td>
                     <td>{{event.activities.count}}</td>
                     <td>{{event.status}}</td>

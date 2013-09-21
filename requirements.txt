@@ -1,4 +1,4 @@
-Django==1.4
+Django==1.5.4
 distribute==0.6.26
 django-disqus==0.4.1
 django-superview==0.3.1

@@ -21,7 +21,7 @@
                 <tbody>
                 {% for activity in object.activities.all %}
                     <tr>
-                        <td><a href="{% url activity activity.slug %}">{{activity.name}}</a></td>
+                        <td><a href="{% url "activity" activity.slug %}">{{activity.name}}</a></td>
                         <td>{{activity.datetime}}</td>
                         <td>{{activity.votes}}</td>
                     </tr>
