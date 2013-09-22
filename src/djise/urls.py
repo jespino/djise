@@ -22,5 +22,5 @@ urlpatterns = patterns('',
     url(r'^activity/(?P<slug>[\w\d\-]+)/$', DetailSuperView.as_view(model=Activity, menu=['events']), name='activity'),
     url(r'^activity/(?P<slug>[\w\d\-]+)/vote/$', VoteView.as_view(), name='activity-vote'),
 
-    url(r'^api/', include(router.urls)),
+    url(r'^api/v1/', include(router.urls, namespace="api-v1")),
 )
