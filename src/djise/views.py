@@ -1,4 +1,4 @@
-from superview.views import SuperView
+from supertools.views.menu import MenuMixin
 from django.views.generic import TemplateView, View, DetailView, ListView
 from django.http import HttpResponse
 from djise.models import Entity, Event, Activity
@@ -9,26 +9,22 @@ from django.utils.translation import ugettext_lazy as _
 from django.http import HttpResponseRedirect
 from django.core.urlresolvers import reverse
 
-class DetailSuperView(SuperView, DetailView):
+class DetailSuperView(MenuMixin, DetailView):
     menu = []
 
-    def render_to_response(self, *args, **kwargs):
-        return super(DetailSuperView, self).render_to_response(self.get_template_names(), *args, **kwargs)
 
-class ListSuperView(SuperView, ListView):
+class ListSuperView(MenuMixin, ListView):
     menu = []
 
-    def render_to_response(self, *args, **kwargs):
-        return super(ListSuperView, self).render_to_response(self.get_template_names(), *args, **kwargs)
 
-class EventView(SuperView, TemplateView):
+class EventView(MenuMixin, TemplateView):
     template_name = "djise/event_detail.html"
     menu = ['events']
 
     def get(self, request, slug, *args, **kwargs):
         context = self.get_context_data(slug)
         context['proposal_form'] = ProposalForm(initial={'event': context['object']})
-        return self.render_to_response(self.template_name, context)
+        return self.render_to_response(context)
 
     def post(self, request, slug, *args, **kwargs):
         context = self.get_context_data(slug)
@@ -38,7 +34,7 @@ class EventView(SuperView, TemplateView):
             proposal_form.save()
             messages.success(request, _('Proposal sended.'))
             return self.render_to_response(context)
-        return self.render_to_response(self.template_name, context)
+        return self.render_to_response(context)
 
     def get_context_data(self, slug, *args, **kwargs):
         context = {}

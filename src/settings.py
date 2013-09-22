@@ -192,3 +192,4 @@ REST_FRAMEWORK = {
     ),
     'DEFAULT_MODEL_SERIALIZER_CLASS': 'rest_framework.serializers.HyperlinkedModelSerializer',
 }
+SUPERTOOLS_MENU_CSS_ACTIVE = "active"

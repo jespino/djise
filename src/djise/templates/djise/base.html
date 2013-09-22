@@ -15,8 +15,8 @@
         <h1 id="head"><a href='{% url "entities" %}'>Djise</a></h1>
 		
 		<ul id="navigation">
-            <li><span class="{{menu.in_entities}}"><a href="{% url "entities" %}">{% trans "Entities" %}</a></span></li>
-            <li><span class="{{menu.in_events}}"><a href="{% url "events" %}">{% trans "Events" %}</a></span></li>
+            <li><span class="{{view.menu.in_entities}}"><a href="{% url "entities" %}">{% trans "Entities" %}</a></span></li>
+            <li><span class="{{view.menu.in_events}}"><a href="{% url "events" %}">{% trans "Events" %}</a></span></li>
             <li style="float:right;"><a href="/admin/">{% trans "Admin" %}</a></li>
 		</ul>
 		
