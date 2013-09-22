@@ -16,11 +16,11 @@ router.register(r'event-attachment', EventAttachmentViewSet)
 
 urlpatterns = patterns('',
     url(r'^$', ListSuperView.as_view(model=Entity, menu=['entities']), name='entities'),
-    url(r'entity/(?P<slug>[\w\d\-]+)/$', DetailSuperView.as_view(model=Entity, menu=['entities']), name='entity'),
-    url(r'events/$', ListSuperView.as_view(model=Event, menu=['events']), name='events'),
-    url(r'event/(?P<slug>[\w\d\-]+)/$', EventView.as_view(), name='event'),
-    url(r'activity/(?P<slug>[\w\d\-]+)/$', DetailSuperView.as_view(model=Activity, menu=['events']), name='activity'),
-    url(r'activity/(?P<slug>[\w\d\-]+)/vote/$', VoteView.as_view(), name='activity-vote'),
+    url(r'^entity/(?P<slug>[\w\d\-]+)/$', DetailSuperView.as_view(model=Entity, menu=['entities']), name='entity'),
+    url(r'^events/$', ListSuperView.as_view(model=Event, menu=['events']), name='events'),
+    url(r'^event/(?P<slug>[\w\d\-]+)/$', EventView.as_view(), name='event'),
+    url(r'^activity/(?P<slug>[\w\d\-]+)/$', DetailSuperView.as_view(model=Activity, menu=['events']), name='activity'),
+    url(r'^activity/(?P<slug>[\w\d\-]+)/vote/$', VoteView.as_view(), name='activity-vote'),
 
     url(r'^api/', include(router.urls)),
 )
